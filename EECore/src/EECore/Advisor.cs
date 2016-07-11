@@ -5,11 +5,8 @@ using System.Threading.Tasks;
 
 namespace EECore
 {
-    public class Program
+    public class Advisor
     {
-        public static void Main(string[] args)
-        {
 
-        }
     }
 }
