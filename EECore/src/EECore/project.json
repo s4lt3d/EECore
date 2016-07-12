@@ -9,8 +9,8 @@
       "type": "platform",
       "version": "1.0.0"
     },
-    "Microsoft.Rest.ClientRuntime": "2.3.1"
-  },
+    "Microsoft.Rest.ClientRuntime": "2.3.1",
+    "System.Net.Sockets": "4.1.0"  },
 
   "frameworks": {
     "netcoreapp1.0": {
