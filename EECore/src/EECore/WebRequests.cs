@@ -26,11 +26,19 @@ namespace EECore
         {
             HttpRequestMessage _httpRequest = new HttpRequestMessage();
             HttpResponseMessage _httpResponse = null;
+            
+            
             _httpRequest.Method = new HttpMethod("POST");
             _httpRequest.RequestUri = new Uri(baseUrl);
-            _httpRequest.Headers.Add("api_payload", body);
+            _httpRequest.Content = new StringContent("api_payload=" + body, System.Text.Encoding.UTF8, "application/json");
+            Console.WriteLine(body);
+             
 
-            _httpResponse = await client.SendAsync(_httpRequest);
+
+
+            //     _httpRequest.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+            _httpResponse = await client.PostAsync(baseUrl, new StringContent("api_payload=" + body, System.Text.Encoding.UTF8, "application/x-www-form-urlencoded"));
+
             string b = await _httpResponse.Content.ReadAsStringAsync();
             Console.WriteLine(b);
 

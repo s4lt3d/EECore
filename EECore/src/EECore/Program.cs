@@ -14,7 +14,7 @@ namespace EECore
 
             WebRequests wr = new WebRequests();
 
-            wr.Request("{\"username\":\"salted\",\"ai_key\":\"49ee125ad5e9a3b81dfb771ac0d3d2fb\",\"server\":\"ai\"}");
+            wr.Request("{\"username\":\"salted\",\"ai_key\":\"49ee125ad5e9a3b81dfb771ac0d3d2fb\",\"server\":\"ai\", \"api_function\":\"info\"}");
 
             while (true) ;
         }
